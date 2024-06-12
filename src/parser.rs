@@ -11,6 +11,7 @@ use crate::native::tdh_types::{
 use crate::native::time::{FileTime, SystemTime};
 use crate::property::PropertySlice;
 use crate::schema::Schema;
+use serde::Serialize;
 use std::collections::HashMap;
 use std::convert::TryInto;
 use std::net::{IpAddr, Ipv4Addr, Ipv6Addr};
@@ -591,7 +592,7 @@ impl private::TryParse<SystemTime> for Parser<'_, '_> {
     }
 }
 
-#[derive(Clone, Default, Debug)]
+#[derive(Clone, Default, Debug, Serialize, Hash, Eq, PartialEq, Copy)]
 pub struct Pointer(usize);
 
 impl std::ops::Deref for Pointer {

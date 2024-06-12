@@ -11,7 +11,7 @@ use super::GUID;
 /// List of Kernel Providers GUIDs
 ///
 /// Credits: [KrabsETW::kernel_guids](https://github.com/microsoft/krabsetw/blob/master/krabs/krabs/kernel_guids.hpp)
-mod kernel_guids {
+pub mod kernel_guids {
     use super::GUID;
     pub const ALPC_GUID: GUID = GUID::from_values(
         0x45d8cccd,
@@ -156,7 +156,7 @@ mod kernel_guids {
 /// List of Kernel Providers flags
 ///
 /// More info: [EVENT_TRACE_PROPERTIES->EnableFlags](https://docs.microsoft.com/en-us/windows/win32/api/evntrace/ns-evntrace-event_trace_properties)
-mod kernel_flags {
+pub mod kernel_flags {
     pub const EVENT_TRACE_FLAG_PROCESS: u32 = 0x00000001;
     pub const EVENT_TRACE_FLAG_THREAD: u32 = 0x00000002;
     pub const EVENT_TRACE_FLAG_IMAGE_LOAD: u32 = 0x00000004;
