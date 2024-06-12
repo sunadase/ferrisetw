@@ -50,7 +50,7 @@ impl From<crate::native::EvntraceNativeError> for TraceError {
     }
 }
 
-type TraceResult<T> = Result<T, TraceError>;
+pub type TraceResult<T> = Result<T, TraceError>;
 
 /// Trace Properties struct
 ///

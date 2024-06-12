@@ -29,6 +29,7 @@ impl From<crate::native::PlaError> for ProviderError {
 }
 
 /// Describes an ETW Provider to use, along with its options
+#[derive(Clone)]
 pub struct Provider {
     /// Provider GUID
     guid: GUID,
